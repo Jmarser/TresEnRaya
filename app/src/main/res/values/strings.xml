@@ -9,7 +9,19 @@
     <string name="author">JMARSER</string>
 
     <!-- ADDPLAYERS -->
-
+    <string name="jugadores">JUGADORES</string>
+    <string name="single_player">1 Jugador</string>
+    <string name="two_players">2 Jugadores</string>
+    <string name="info_add_players">Seleccione una opción</string>
+    <string name="info_single_player">Jugarás contra el sistema</string>
+    <string name="info_two_players">Jugarás contra otro jugador</string>
+    <string name="btn_siguiente">SIGUIENTE</string>
+    <string name="btn_jugar">JUGAR</string>
+    <string name="selectDificulted">Seleccione dificultad</string>
+    <string name="easy">Fácil</string>
+    <string name="normal">Normal</string>
+    <string name="hard">Dificil</string>
+    <string name="name_player">Nombre del jugador</string>
 
     <!-- GAME -->
 

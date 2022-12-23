@@ -10,16 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
  * */
 public class NavigationFragment {
 
-    /* Método con el que reemplazamos un fragment por otro */
-    public static void replaceFragment(FragmentManager fm, Fragment fragment, String fragmentTag){
-        fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.setCustomAnimations(android.R.anim.fade_in, 0, 0, android.R.anim.fade_out);
-        ft.replace(R.id.frame, fragment, fragmentTag);
-        ft.addToBackStack(fragmentTag);
-        ft.commitAllowingStateLoss();
-    }
-
     /**
      * Método con el que se realiza la navegación entre fragments, reemplazando uno por otro, éste método nos permite
      * reutilizarlo en diferentes activitys que lo llamen ya que el contenedor del fragment se pasa por
@@ -38,14 +28,6 @@ public class NavigationFragment {
         ft.commitAllowingStateLoss();
     }
 
-    /* Método con el que agregamos un fragment a un frame */
-    public static void addFragment(FragmentManager fm, Fragment fragment, String fragmentTag){
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.setCustomAnimations(android.R.anim.fade_in, 0, 0, android.R.anim.fade_out);
-        ft.add(R.id.frame, fragment, fragmentTag);
-        ft.addToBackStack(fragmentTag);
-        ft.commitAllowingStateLoss();
-    }
 
     /**
      * Método con el que se realiza la navegación entre fragments, agrega un fragmento, éste método nos permite
@@ -63,4 +45,23 @@ public class NavigationFragment {
         ft.addToBackStack(fragmentTag);
         ft.commitAllowingStateLoss();
     }
+
+        /* Método con el que reemplazamos un fragment por otro
+    public static void replaceFragment(FragmentManager fm, Fragment fragment, String fragmentTag){
+        fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.setCustomAnimations(android.R.anim.fade_in, 0, 0, android.R.anim.fade_out);
+        ft.replace(R.id.frame, fragment, fragmentTag);
+        ft.addToBackStack(fragmentTag);
+        ft.commitAllowingStateLoss();
+    }*/
+
+    /* Método con el que agregamos un fragment a un frame
+    public static void addFragment(FragmentManager fm, Fragment fragment, String fragmentTag){
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.setCustomAnimations(android.R.anim.fade_in, 0, 0, android.R.anim.fade_out);
+        ft.add(R.id.frame, fragment, fragmentTag);
+        ft.addToBackStack(fragmentTag);
+        ft.commitAllowingStateLoss();
+    }*/
 }
