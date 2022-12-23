@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tres en raya</string>
+
+    <!-- SPLASH -->
+    <string name="tic">TIC</string>
+    <string name="tac">TAC</string>
+    <string name="toe">TOE</string>
+    <string name="by">by</string>
+    <string name="author">JMARSER</string>
+
+    <!-- ADDPLAYERS -->
+
+
+    <!-- GAME -->
+
+
+    <!-- CUSTOM DIALOG -->
+
+
+</resources>

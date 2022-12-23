@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Creamos el efecto de movimiento, en el eje X ninguno, en el eje Y comenzará fuera de la pantalla
+    y se desplazará de abajo hacia arriba.
+    El efecto durará el tiempo que le indiquemos -->
+    <translate
+        android:fromXDelta="0%"
+        android:fromYDelta="100%"
+        android:duration="2500"/>
+
+    <!-- Aplicamos un efecto de aparición -->
+    <alpha
+        android:fromAlpha="0.1"
+        android:toAlpha="1.0"
+        android:duration="2500"/>
+</set>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Para esta animación no queremos desplazamiento, sólo que se aparezca poco a poco y como queremos
+     que sea después de terminar las demás animaciones, duplicamos el tiempo que las animaciones en
+     desarrollarse. -->
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="5000"/>
+</set>
