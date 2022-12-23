@@ -1,6 +1,7 @@
 package com.jmarser.tresenraya.addPlayers;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import com.jmarser.tresenraya.R;
@@ -24,7 +25,11 @@ public class AddPlayersActivity extends AppCompatActivity {
 
         //Si no recivimos variable de estado, por defecto mostramos el fragment principal
         if(savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(binding.selectedPlayersFrame.getId(), new SelectedPlayersFragment()).commit();
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_fragment_right_to_left, R.anim.exit_fragment_left_to_right)
+                    .replace(binding.selectedPlayersFrame.getId(), new SelectedPlayersFragment())
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit();
         }
     }
 

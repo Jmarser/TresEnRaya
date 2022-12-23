@@ -25,6 +25,7 @@ public class SinglePlayerLogicImpl implements SinglePlayerLogic{
         String nombre = nomJugador.getEditText().getText().toString();
         if(!TextUtils.isEmpty(nombre)){
             if(opcion1.isChecked() || opcion2.isChecked() || opcion3.isChecked()){
+                //Dependiendo de la opción seleccionada por el usuario, determinamos un nivel de dificultad para la IA
                 int dificultad = -1;
                 if(opcion1.isChecked()){
                     dificultad = 0;
@@ -44,6 +45,8 @@ public class SinglePlayerLogicImpl implements SinglePlayerLogic{
             }
         }else{
             singlePlayerView.showErrorForm("Debe indicar un nombre de jugador.");
+            nomJugador.getEditText().setError("Falta el nombre del jugador");
+            nomJugador.getEditText().findFocus();
         }
     }
 }

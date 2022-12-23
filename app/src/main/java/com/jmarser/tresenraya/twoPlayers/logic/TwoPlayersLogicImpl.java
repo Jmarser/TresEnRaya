@@ -21,17 +21,23 @@ public class TwoPlayersLogicImpl implements TwoPlayersLogic{
 
     @Override
     public void validateForm(TextInputLayout jugador1, TextInputLayout jugador2) {
+        //obtenemos los textos de los campos
         String nombre1 = jugador1.getEditText().getText().toString();
         String nombre2 = jugador2.getEditText().getText().toString();
 
-        if(!TextUtils.isEmpty(nombre1)){
-            if(!TextUtils.isEmpty(nombre2)){
+        if(!TextUtils.isEmpty(nombre1)){//Campo no vacio
+            if(!TextUtils.isEmpty(nombre2)){ //campo no vacío.
                 twoplayersView.goToGame(nombre1, nombre2);
-            }else{
+
+            }else{ //Campo vacío.
                 twoplayersView.showErrorForm("Debe indicar el nombre del jugador");
+                jugador2.getEditText().setError("Falta el nombre del jugador");
+                jugador2.getEditText().findFocus();
             }
-        }else{
+        }else{ //Campo vacío.
             twoplayersView.showErrorForm("Debe indicar el nombre del jugador");
+            jugador1.getEditText().setError("Falta nombre del jugador.");
+            jugador1.getEditText().findFocus();
         }
     }
 }

@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -117,11 +118,19 @@ public class SelectedPlayersFragment extends Fragment implements SelectedPlayers
 
     @Override
     public void singlePlayerSelected() {
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.selected_players_frame, new SinglePlayerFragment()).commit();
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(R.anim.enter_fragment_right_to_left, R.anim.exit_fragment_right_to_left, R.anim.enter_fragment_left_to_right, R.anim.exit_fragment_left_to_right)
+                .replace(R.id.selected_players_frame, new SinglePlayerFragment())
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit();
     }
 
     @Override
     public void twoPlayerSelected() {
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.selected_players_frame, new TwoPlayersFragment()).commit();
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(R.anim.enter_fragment_right_to_left, R.anim.exit_fragment_right_to_left, R.anim.enter_fragment_left_to_right, R.anim.exit_fragment_left_to_right)
+                .replace(R.id.selected_players_frame, new TwoPlayersFragment())
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit();
     }
 }

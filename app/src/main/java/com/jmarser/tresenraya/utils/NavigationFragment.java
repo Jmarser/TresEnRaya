@@ -1,6 +1,10 @@
 package com.jmarser.tresenraya.utils;
 
+import android.app.Activity;
+
 import com.jmarser.tresenraya.R;
+import com.jmarser.tresenraya.singlePlayer.ui.SinglePlayerFragment;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -27,7 +31,6 @@ public class NavigationFragment {
         ft.addToBackStack(fragmentTag);
         ft.commitAllowingStateLoss();
     }
-
 
     /**
      * Método con el que se realiza la navegación entre fragments, agrega un fragmento, éste método nos permite
